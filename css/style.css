@@ -1,4 +1,77 @@
+/* Bloc CSS Media Queries Checkpoint */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #dadada;
-  font-size: 10px;
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  column-span: all;
+  font-size: 2em;
+  margin: 0px 20px 0px 20px;
+  padding-top: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0px 20px 0px 20px;
+  padding-top: 20px;
+}
+
+img {
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+}
+
+.container {
+  background-color: white;
+  display: block;
+  margin: auto;
+  width: 420px;
+}
+
+.emphasis {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+/* If the display is tablet-sized */
+@media screen and (min-width: 575px) {
+  /* Display Two-Columns */
+  .container {
+    background-color: white;
+    column-count: 2;
+    display: block;
+    margin: auto;
+    width: 600px;
+  }
+  /* Crop images to fit the columns */
+  img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%
+  }
+}
+
+/* If the display is laptop-sized */
+@media screen and (min-width: 1199px) {
+  /* Display Two-Columns */
+  .container {
+    column-count: 4;
+    display: block;
+    margin: auto;
+    width: 900px;
+  }
+  /* Crop images to fit the columns */
+  img {
+    object-fit: cover;
+    height: 150px;
+    width: 100%
+  }
 }
